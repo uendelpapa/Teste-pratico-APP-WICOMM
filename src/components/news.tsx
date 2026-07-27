@@ -59,12 +59,10 @@ const newProducts = [
 export function News() {
     return (
         <section className="flex flex-col w-full pt-[35px] pb-10 overflow-hidden">
-            {/* Título */}
             <h2 className="text-[20px] text-[#0C0C0C] font-semibold leading-6 tracking-[0.4px] uppercase mb-5 pl-4">
                 NOVIDADES
             </h2>
 
-            {/* Carrossel de produtos */}
             <div className="pl-4 relative">
                 <Carousel opts={{ align: "start", dragFree: true }} className="w-full">
                     <CarouselContent className="-ml-[14px]">
@@ -78,7 +76,6 @@ export function News() {
                 </Carousel>
             </div>
 
-            {/* Banner inferior */}
             <div className="w-full px-[17px] mt-8">
                 <div className="w-full h-[431px] rounded-[24px] overflow-hidden">
                     <img

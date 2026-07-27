@@ -72,7 +72,6 @@ export function OurProducts() {
                     ))}
                 </CarouselContent>
 
-                {/* As setas flutuando nas pontas, igual a referência */}
                 <CarouselPrevious className="size-6 absolute left-1 top-6 -translate-y-1/2 bg-white text-primary hover:text-primary/50 border-none shadow-lg z-10" />
                 <CarouselNext className="size-6 absolute right-4 top-6 -translate-y-1/2 bg-white text-primary hover:text-primary/50 border-none shadow-lg z-10" />
             </Carousel>

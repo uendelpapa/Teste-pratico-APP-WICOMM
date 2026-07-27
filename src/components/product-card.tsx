@@ -97,7 +97,6 @@ export function ProductCard({
             transition={{ duration: 0.2, ease: "easeOut" }}
             className={`${s.card} flex flex-col bg-[#FAFAF8] overflow-hidden group`}
         >
-            {/* Área da Imagem */}
             <div className={`relative w-full ${s.imageArea} bg-[#F6F6F6] flex`}>
                 {discount && (
                     <div className={`absolute flex ${s.discountBadge} items-center justify-center top-4 left-3 px-[7.544px] bg-primary rounded-full z-10`}>
@@ -130,7 +129,6 @@ export function ProductCard({
                 />
             </div>
 
-            {/* Detalhes do Produto */}
             <div className={`flex flex-col ${s.content}`}>
                 <div className={`flex flex-col ${s.header}`}>
                     <span className={`${s.brand} text-neutral-gray-500 uppercase`}>

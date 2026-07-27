@@ -14,7 +14,7 @@ export function CategoryCard({ image, title, className }: CategoryCardProps) {
                 alt={title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            {/* Opcional: leve overlay para garantir o contraste do botão, embora na referência pareça não ter */}
+
             <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
             <div className="absolute ml-3 bottom-3 flex justify-center">

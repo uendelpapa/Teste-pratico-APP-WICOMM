@@ -224,7 +224,6 @@ export function OurBrands() {
     return (
         <section className="flex flex-col w-full overflow-hidden bg-primary">
             <Tabs defaultValue="MIZUNO" className="w-full gap-0">
-                {/* Cabeçalho vermelho com título e abas */}
                 <div className="bg-primary px-4 pt-8 mb-[28px]">
                     <h2 className="text-white text-[22px] font-semibold leading-7 tracking-[0.48px] uppercase mb-6">
                         NOSSAS MARCAS
@@ -246,7 +245,6 @@ export function OurBrands() {
                     <div className="w-full h-0.5 bg-white -mt-[2px]" />
                 </div>
 
-                {/* Conteúdo das abas */}
                 {brandsData.map((brand) => (
                     <TabsContent key={brand.name} value={brand.name} className="mt-0">
                         <motion.div
@@ -254,7 +252,6 @@ export function OurBrands() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.35, ease: "easeOut" }}
                         >
-                            {/* Banner da marca */}
                             <div className="w-full px-4 pt-4">
                                 <div className="w-full h-[296px] rounded-[24px] overflow-hidden">
                                     <img
@@ -265,7 +262,6 @@ export function OurBrands() {
                                 </div>
                             </div>
 
-                            {/* Carrossel de produtos */}
                             <div className="pl-4 pt-5 pb-[38px]">
                                 <Carousel opts={{ align: "start", dragFree: true }} className="w-full">
                                     <CarouselContent className="-ml-[14px] pt-1">

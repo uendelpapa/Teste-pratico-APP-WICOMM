@@ -31,7 +31,6 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     <DialogTitle>Pesquisar produtos</DialogTitle>
                 </DialogHeader>
 
-                {/* Campo de pesquisa */}
                 <div className="flex items-center gap-3 pt-1 pr-8">
                     <Search size={22} strokeWidth={1.5} className="text-neutral-gray-700 shrink-0" />
                     <input
@@ -44,7 +43,6 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
                 <div className="h-px bg-neutral-200 my-2" />
 
-                {/* Sugestões populares */}
                 <div className="py-2">
                     <p className="text-[13px] font-medium text-neutral-gray-500 uppercase tracking-wider mb-4">
                         Pesquisas populares

@@ -70,17 +70,14 @@ export default function CarouselHero() {
                     {slides.map((slide) => (
                         <CarouselItem key={slide.id} className="pl-0">
                             <div className="relative w-full h-[590px] flex flex-col justify-end items-center pb-[74px] text-white bg-black">
-                                {/* Imagem de Fundo */}
                                 <img
                                     src={slide.image}
                                     alt={`Banner promocional Wicomm - Oferta especial ${slide.discount}`}
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
 
-                                {/* Overlay de Gradiente Escuro para contraste */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/20 to-black/10" />
 
-                                {/* Conteúdo (Textos e Botão) */}
                                 <div className="relative z-10 flex flex-col">
                                     <div className="flex items-center gap-[7.77px] mb-[12.23px]">
                                         <span className="text-[18.344px] font-normal leading-[18.111px] tracking-[0.734px] line-through capitalize">
@@ -105,7 +102,6 @@ export default function CarouselHero() {
                 </CarouselContent>
             </Carousel>
 
-            {/* Navegação por Dots (Paginação) */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-[2.67px] z-20">
                 {Array.from({ length: count }).map((_, index) => (
                     <button
