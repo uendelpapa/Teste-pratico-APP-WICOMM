@@ -116,10 +116,16 @@ export function DisplayWindow() {
                         BABY
                     </TabsTrigger>
                     <TabsTrigger
-                        value="lifestyle"
+                        value="lancamentos"
                         className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
                     >
-                        LIFESTYLE
+                        LANÇAMENTOS
+                    </TabsTrigger>
+                    <TabsTrigger
+                        value="favoritos"
+                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
+                    >
+                        FAVORITOS
                     </TabsTrigger>
                 </TabsList>
 
@@ -149,7 +155,13 @@ export function DisplayWindow() {
                     </motion.div>
                 </TabsContent>
 
-                <TabsContent value="lifestyle">
+                <TabsContent value="lancamentos">
+                    <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <ProductCarousel />
+                    </motion.div>
+                </TabsContent>
+
+                <TabsContent value="favoritos">
                     <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
                         <ProductCarousel />
                     </motion.div>
