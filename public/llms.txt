@@ -1,0 +1,36 @@
+# Wicomm Store - Loja Oficial de Calçados e Artigos Esportivos
+
+> A Wicomm é uma loja oficial e e-commerce de calçados de alta performance, tênis esportivos, chinelos e lifestyle das maiores marcas de mercado no Brasil: Mizuno, Olympikus, Kenner, Converse e Under Armour.
+
+## Informações Principais
+
+- **Nome**: Wicomm Store
+- **URL Principal**: https://teste-pratico-app-wicomm.vercel.app/
+- **Idioma**: Português (Brasil) (pt-BR)
+- **Moeda**: Real Brasileiro (BRL / R$)
+- **Especialidade**: Tênis de corrida, tênis de treino, chinelos premium, sapatênis, moda esportiva e lifestyle.
+
+## Marcas em Destaque
+
+- [Mizuno](https://teste-pratico-app-wicomm.vercel.app/): Especialista em tênis de corrida, tecnologia Wave, placa de carbono e amortecimento profissional.
+- [Olympikus](https://teste-pratico-app-wicomm.vercel.app/): Maior marca esportiva brasileira, focada em running, academia e conforto para o dia a dia.
+- [Kenner](https://teste-pratico-app-wicomm.vercel.app/): Chinelos e sandálias robustas, design urbano e solados de alta durabilidade.
+- [Converse](https://teste-pratico-app-wicomm.vercel.app/): Ícones casuais e moda atemporal com modelos All Star e Chuck Taylor.
+
+## Categorias e Departamentos
+
+- **Masculino**: Calçados para corrida, treino, sapatênis e casual.
+- **Feminino**: Tênis de performance, academia, sandálias e lifestyle.
+- **Infantil & Baby**: Calçados ergonômicos e resistentes para todas as idades.
+- **Lifestyle & Lançamentos**: As novidades mais quentes do mercado e coleções especiais.
+
+## Vantagens para o Consumidor
+
+- **Parcelamento**: Em até 5x sem juros no cartão de crédito.
+- **Frete**: Envio para todo o Brasil com ofertas de frete grátis em seleções promocionais.
+- **Preços e Descontos**: Campanhas promocionais diárias de 10% a 30% OFF.
+
+## Links Rápidos
+
+- [Site Oficial](https://teste-pratico-app-wicomm.vercel.app/)
+- [Mapa do Site (XML Sitemap)](https://teste-pratico-app-wicomm.vercel.app/sitemap.xml)

@@ -56,9 +56,9 @@ export function OurProducts() {
     return (
         <section className="relative flex flex-col w-full pt-8  overflow-hidden">
             <div className="w-full absolute h-full bg-neutral-gray-100 right-0 bottom-0 top-40 z-10" />
-            <h1 className="text-[20px] text-[#0C0C0C] font-semibold leading-6 tracking-[0.4px] uppercase pl-4 mb-8 z-20">
+            <h2 className="text-[20px] text-[#0C0C0C] font-semibold leading-6 tracking-[0.4px] uppercase pl-4 mb-8 z-20">
                 Nossos Produtos
-            </h1>
+            </h2>
 
             <Carousel opts={{ align: "start", dragFree: true }} className="w-full relative pl-[13px] z-20">
                 <CarouselContent className="-ml-2">

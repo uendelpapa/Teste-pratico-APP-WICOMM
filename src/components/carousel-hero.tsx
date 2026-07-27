@@ -73,7 +73,7 @@ export default function CarouselHero() {
                                 {/* Imagem de Fundo */}
                                 <img
                                     src={slide.image}
-                                    alt="Promo"
+                                    alt={`Banner promocional Wicomm - Oferta especial ${slide.discount}`}
                                     className="absolute inset-0 w-full h-full object-cover"
                                 />
 
@@ -90,9 +90,9 @@ export default function CarouselHero() {
                                             {slide.discount}
                                         </span>
                                     </div>
-                                    <h1 className="text-[55.032px] tracking-[1.101px] leading-[37.332px] font-black mb-[18.77px] drop-shadow-lg">
+                                    <p className="text-[55.032px] tracking-[1.101px] leading-[37.332px] font-black mb-[18.77px] drop-shadow-lg">
                                         {slide.newPrice}
-                                    </h1>
+                                    </p>
                                     <div className="flex justify-center">
                                         <Button className="h-[32px] py-[13.495px] px-[26.991px]">
                                             CONFIRA

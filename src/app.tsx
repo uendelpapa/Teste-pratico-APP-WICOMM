@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 export default function App() {
   return (
     <div className="pb-[60px]">
+      <h1 className="sr-only">Wicomm Store - Loja Oficial de Calçados, Tênis e Artigos Esportivos</h1>
       <Header />
       <CarouselHero />
       <OfferBanner />
