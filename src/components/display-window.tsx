@@ -22,7 +22,8 @@ const mockProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "5x de R$ 100,00"
+        installments: "5x de R$ 100,00",
+        fees: true
     },
     {
         discount: "-20%",
@@ -32,7 +33,8 @@ const mockProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "5x de R$ 100,00"
+        installments: "5x de R$ 100,00",
+        fees: true,
     },
     {
         discount: "-20%",
@@ -42,7 +44,8 @@ const mockProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "5x de R$ 100,00"
+        installments: "5x de R$ 100,00",
+        fees: true
     },
     {
         discount: "-20%",
@@ -52,7 +55,8 @@ const mockProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "5x de R$ 100,00"
+        installments: "5x de R$ 100,00",
+        fees: true,
     },
 ]
 
