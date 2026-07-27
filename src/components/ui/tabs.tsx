@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -39,12 +40,59 @@ const tabsListVariants = cva(
 function TabsList({
   className,
   variant = "default",
+  onWheel,
+  onMouseDown,
+  onMouseLeave,
+  onMouseUp,
+  onMouseMove,
   ...props
 }: TabsPrimitive.List.Props & VariantProps<typeof tabsListVariants>) {
+  const isDragging = React.useRef(false)
+  const startX = React.useRef(0)
+  const scrollLeft = React.useRef(0)
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (e.deltaY !== 0 && e.currentTarget.scrollWidth > e.currentTarget.clientWidth) {
+      e.currentTarget.scrollLeft += e.deltaY
+      e.preventDefault()
+    }
+    ;(onWheel as any)?.(e)
+  }
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    isDragging.current = true
+    startX.current = e.pageX - e.currentTarget.offsetLeft
+    scrollLeft.current = e.currentTarget.scrollLeft
+    ;(onMouseDown as any)?.(e)
+  }
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    isDragging.current = false
+    ;(onMouseLeave as any)?.(e)
+  }
+
+  const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
+    isDragging.current = false
+    ;(onMouseUp as any)?.(e)
+  }
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging.current) return
+    const x = e.pageX - e.currentTarget.offsetLeft
+    const walk = (x - startX.current) * 1.5
+    e.currentTarget.scrollLeft = scrollLeft.current - walk
+    ;(onMouseMove as any)?.(e)
+  }
+
   return (
     <TabsPrimitive.List
       data-slot="tabs-list"
       data-variant={variant}
+      onWheel={handleWheel}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
       className={cn(tabsListVariants({ variant }), className)}
       {...props}
     />

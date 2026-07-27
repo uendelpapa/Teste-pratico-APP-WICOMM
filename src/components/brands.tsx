@@ -41,7 +41,7 @@ const brandData: BrandsProps[] = [
 
 export function Brands() {
     return (
-        <section className="flex w-full items-center pl-4 bg-neutral-gray-100">
+        <section className="flex w-full items-center pl-4 pb-3 bg-neutral-gray-100">
             <Carousel opts={{ align: "start", dragFree: true }} className="w-full relative">
                 <CarouselContent className="-ml-1">
                     {brandData.map((brand, index) => (

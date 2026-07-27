@@ -56,9 +56,9 @@ const newProducts = [
     },
 ]
 
-export function Novidades() {
+export function News() {
     return (
-        <section className="flex flex-col w-full py-10 overflow-hidden">
+        <section className="flex flex-col w-full pt-[35px] pb-10 overflow-hidden">
             {/* Título */}
             <h2 className="text-[20px] text-[#0C0C0C] font-semibold leading-6 tracking-[0.4px] uppercase mb-5 pl-4">
                 NOVIDADES

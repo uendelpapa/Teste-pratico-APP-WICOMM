@@ -27,9 +27,8 @@ export function BottomNav() {
 
     return (
         <nav
-            className={`fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-neutral-200 transition-transform duration-300 ${
-                hidden ? "translate-y-full" : "translate-y-0"
-            }`}
+            className={`fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-neutral-200 transition-transform duration-300 ${hidden ? "translate-y-full" : "translate-y-0"
+                }`}
         >
             <div className="flex items-center justify-around h-[60px] max-w-lg mx-auto">
                 {navItems.map((item) => {

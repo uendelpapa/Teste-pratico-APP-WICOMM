@@ -80,11 +80,12 @@ function ProductCarousel() {
 
 export function DisplayWindow() {
     return (
-        <section className="w-full py-10 px-4 bg-neutral-gray-100 overflow-hidden">
+        <section className="relative w-full py-9 px-4 overflow-hidden">
+            <div className="absolute w-screen h-[90px] bg-neutral-gray-100 top-0 left-1/2 -translate-x-1/2 z-10" />
             <Tabs defaultValue="masculino" className="w-full relative">
                 <TabsList
                     variant="line"
-                    className="w-full justify-start gap-4 md:gap-8 border-neutral-gray-900 z-20"
+                    className="w-full justify-start gap-4 border-neutral-gray-900 overflow-x-auto no-scrollbar flex-nowrap cursor-grab active:cursor-grabbing z-20"
                 >
                     <TabsTrigger
                         value="masculino"

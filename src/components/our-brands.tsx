@@ -231,7 +231,7 @@ export function OurBrands() {
                     </h2>
                     <TabsList
                         variant="line"
-                        className="w-full justify-start gap-6 border-white"
+                        className="w-full justify-start gap-6 border-white overflow-x-auto no-scrollbar flex-nowrap cursor-grab active:cursor-grabbing"
                     >
                         {brandsData.map((brand) => (
                             <TabsTrigger

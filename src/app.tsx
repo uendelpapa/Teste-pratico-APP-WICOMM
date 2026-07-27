@@ -6,7 +6,7 @@ import { OurProducts } from "#components/our-products";
 import { Header } from "./components/header";
 import { ShopBySize } from "./components/shop-by-size";
 import { OurBrands } from "./components/our-brands";
-import { Novidades } from "./components/novidades";
+import { News } from "./components/news";
 import { BottomNav } from "./components/bottom-nav";
 import { Toaster } from "./components/ui/sonner";
 import { motion } from "framer-motion";
@@ -69,7 +69,7 @@ export default function App() {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <Novidades />
+        <News />
       </motion.div>
 
       <BottomNav />
