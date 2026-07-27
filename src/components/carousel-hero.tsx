@@ -5,7 +5,8 @@ import {
     type CarouselApi,
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
+import Autoplay from "embla-carousel-autoplay"
 
 import imgCarousel1 from "../assets/img-carousel-1.png"
 
@@ -13,6 +14,10 @@ export default function CarouselHero() {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
+
+    const plugin = useRef(
+        Autoplay({ delay: 4000, stopOnInteraction: false })
+    )
 
     useEffect(() => {
         if (!api) {
@@ -53,11 +58,18 @@ export default function CarouselHero() {
 
     return (
         <section className="relative w-full overflow-hidden">
-            <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
+            <Carousel
+                setApi={setApi}
+                plugins={[plugin.current]}
+                className="w-full"
+                opts={{ loop: true }}
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+            >
                 <CarouselContent className="ml-0">
                     {slides.map((slide) => (
                         <CarouselItem key={slide.id} className="pl-0">
-                            <div className="relative w-full h-[590px] flex flex-col justify-end items-center pb-[60px] text-white bg-black">
+                            <div className="relative w-full h-[590px] flex flex-col justify-end items-center pb-[74px] text-white bg-black">
                                 {/* Imagem de Fundo */}
                                 <img
                                     src={slide.image}
@@ -66,23 +78,23 @@ export default function CarouselHero() {
                                 />
 
                                 {/* Overlay de Gradiente Escuro para contraste */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/20 to-black/10" />
 
                                 {/* Conteúdo (Textos e Botão) */}
                                 <div className="relative z-10 flex flex-col">
-                                    <div className="flex items-center gap-[7.77px] mb-1">
+                                    <div className="flex items-center gap-[7.77px] mb-[12.23px]">
                                         <span className="text-[18.344px] font-normal leading-[18.111px] tracking-[0.734px] line-through capitalize">
                                             {slide.oldPrice}
                                         </span>
-                                        <span className="bg-primary text-primary-foreground text-[10.701px] text-center font-bold px-[8.41px] py-[6.11px] rounded-full uppercase leading-none tracking-[0.214px]">
+                                        <span className="h-[19.873px] flex items-center bg-primary text-primary-foreground text-[10.701px] text-center font-semibold px-[8.41px] py-[7.643px] rounded-full uppercase leading-[21.401px] tracking-[0.214px]">
                                             {slide.discount}
                                         </span>
                                     </div>
-                                    <h1 className="text-[55.032px] tracking-[1.101px] leading-none font-black mb-4 drop-shadow-lg">
+                                    <h1 className="text-[55.032px] tracking-[1.101px] leading-[37.332px] font-black mb-[18.77px] drop-shadow-lg">
                                         {slide.newPrice}
                                     </h1>
                                     <div className="flex justify-center">
-                                        <Button>
+                                        <Button className="h-[32px] py-[13.495px] px-[26.991px]">
                                             CONFIRA
                                         </Button>
                                     </div>
@@ -94,7 +106,7 @@ export default function CarouselHero() {
             </Carousel>
 
             {/* Navegação por Dots (Paginação) */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-[2.67px] z-20">
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-[2.67px] z-20">
                 {Array.from({ length: count }).map((_, index) => (
                     <button
                         key={index}

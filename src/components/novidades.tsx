@@ -17,7 +17,9 @@ const newProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "ou 5x de R$ 100,00 sem juros"
+        installments: "5x de R$ 100,00",
+        fees: true,
+
     },
     {
         discount: "-20%",
@@ -27,7 +29,8 @@ const newProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "ou 5x de R$ 100,00 sem juros"
+        installments: "5x de R$ 100,00",
+        fees: true,
     },
     {
         discount: "-20%",
@@ -37,7 +40,8 @@ const newProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "ou 5x de R$ 100,00 sem juros"
+        installments: "5x de R$ 100,00",
+        fees: true,
     },
     {
         discount: "-20%",
@@ -47,7 +51,8 @@ const newProducts = [
         oldPrice: "R$ 799,00",
         newPrice: "R$ 499,90",
         clubPrice: "R$ 399,00",
-        installments: "ou 5x de R$ 100,00 sem juros"
+        installments: "5x de R$ 100,00",
+        fees: true,
     },
 ]
 
@@ -55,7 +60,7 @@ export function Novidades() {
     return (
         <section className="flex flex-col w-full py-10 overflow-hidden">
             {/* Título */}
-            <h2 className="text-[22px] font-bold leading-tight tracking-wide uppercase mb-6 pl-4">
+            <h2 className="text-[20px] text-[#0C0C0C] font-semibold leading-6 tracking-[0.4px] uppercase mb-5 pl-4">
                 NOVIDADES
             </h2>
 
@@ -65,17 +70,17 @@ export function Novidades() {
                     <CarouselContent className="-ml-[14px]">
                         {newProducts.map((product, index) => (
                             <CarouselItem key={index} className="pl-[14px] basis-auto">
-                                <ProductCard {...product} />
+                                <ProductCard variant="lg" {...product} />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselNext className="size-7 absolute right-4 top-[35%] -translate-y-1/2 bg-white/90 hover:bg-white text-neutral-gray-700 border border-neutral-200 shadow-sm z-10" />
+                    <CarouselNext className="size-6 absolute right-4 top-4 -translate-y-1/2 border-none bg-white text-primary hover:text-primary/50 shadow-lg z-10" />
                 </Carousel>
             </div>
 
             {/* Banner inferior */}
-            <div className="w-full px-4 mt-8">
-                <div className="w-full h-[280px] rounded-2xl overflow-hidden">
+            <div className="w-full px-[17px] mt-8">
+                <div className="w-full h-[431px] rounded-[24px] overflow-hidden">
                     <img
                         src={BannerNovidades}
                         alt="Novidades - Nova coleção"

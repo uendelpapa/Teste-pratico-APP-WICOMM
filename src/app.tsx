@@ -8,6 +8,8 @@ import { ShopBySize } from "./components/shop-by-size";
 import { OurBrands } from "./components/our-brands";
 import { Novidades } from "./components/novidades";
 import { BottomNav } from "./components/bottom-nav";
+import { Toaster } from "./components/ui/sonner";
+import { motion } from "framer-motion";
 
 export default function App() {
   return (
@@ -15,13 +17,63 @@ export default function App() {
       <Header />
       <CarouselHero />
       <OfferBanner />
-      <OurProducts />
-      <ShopBySize />
-      <Brands />
-      <DisplayWindow />
-      <OurBrands />
-      <Novidades />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <OurProducts />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <ShopBySize />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <Brands />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <DisplayWindow />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <OurBrands />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <Novidades />
+      </motion.div>
+
       <BottomNav />
+      <Toaster position="top-right" richColors />
     </div>
   )
 }

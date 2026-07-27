@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { ProductCard } from "./product-card"
 import ImgTenis from "@/assets/shoes.png"
 import {
@@ -57,77 +58,96 @@ const mockProducts = [
 
 function ProductCarousel() {
     return (
-        <Carousel opts={{ align: "start", dragFree: true }} className="w-full">
-            <CarouselContent className="-ml-[14px]">
-                {mockProducts.map((product, index) => (
-                    <CarouselItem key={index} className="pl-[14px] basis-auto">
-                        <ProductCard {...product} />
-                    </CarouselItem>
-                ))}
-            </CarouselContent>
-        </Carousel>
-    )
+        <div className="pt-6 relative">
+            <Carousel
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+                className="w-full"
+            >
+                <CarouselContent className="-ml-3">
+                    {mockProducts.map((product, index) => (
+                        <CarouselItem key={index} className="pl-3 basis-auto">
+                            <ProductCard {...product} />
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+            </Carousel>
+        </div>
+    );
 }
 
 export function DisplayWindow() {
     return (
-        <section className="relative flex flex-col w-full py-12 pl-4 overflow-hidden">
-            <div className="w-full absolute h-24 bg-neutral-gray-100 right-0 bottom-0 top-0 z-10" />
-            <Tabs defaultValue="masculino" className="w-full gap-4 z-20">
+        <section className="w-full py-10 px-4 bg-neutral-gray-100 overflow-hidden">
+            <Tabs defaultValue="masculino" className="w-full relative">
                 <TabsList
                     variant="line"
-                    className="w-full justify-start gap-6 border-b-3 border-white h-auto pb-0 mb-2.5"
+                    className="w-full justify-start gap-4 md:gap-8 border-neutral-gray-900 overflow-x-auto no-scrollbar flex-nowrap z-20"
                 >
                     <TabsTrigger
                         value="masculino"
-                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
+                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
                     >
                         MASCULINO
                     </TabsTrigger>
                     <TabsTrigger
                         value="feminino"
-                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-700 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
+                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
                     >
                         FEMININO
                     </TabsTrigger>
                     <TabsTrigger
                         value="infantil"
-                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-700 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
+                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
                     >
                         INFANTIL
                     </TabsTrigger>
                     <TabsTrigger
                         value="baby"
-                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-700 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
+                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
                     >
                         BABY
                     </TabsTrigger>
                     <TabsTrigger
                         value="lifestyle"
-                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-700 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
+                        className="text-[16px] md:text-[18px] tracking-wide uppercase font-medium pb-3 px-0 text-neutral-gray-900 data-active:text-primary data-active:font-bold data-active:after:bg-primary"
                     >
                         LIFESTYLE
                     </TabsTrigger>
                 </TabsList>
 
+                <div className="absolute w-full h-[3px] bg-white mt-[34px] rounded-full z-10" />
+
                 <TabsContent value="masculino">
-                    <ProductCarousel />
+                    <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <ProductCarousel />
+                    </motion.div>
                 </TabsContent>
 
                 <TabsContent value="feminino">
-                    <ProductCarousel />
+                    <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <ProductCarousel />
+                    </motion.div>
                 </TabsContent>
 
                 <TabsContent value="infantil">
-                    <ProductCarousel />
+                    <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <ProductCarousel />
+                    </motion.div>
                 </TabsContent>
 
                 <TabsContent value="baby">
-                    <ProductCarousel />
+                    <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <ProductCarousel />
+                    </motion.div>
                 </TabsContent>
 
                 <TabsContent value="lifestyle">
-                    <ProductCarousel />
+                    <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+                        <ProductCarousel />
+                    </motion.div>
                 </TabsContent>
             </Tabs>
         </section>

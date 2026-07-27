@@ -54,16 +54,16 @@ const ourProductsData: OurProductsProps[] = [
 
 export function OurProducts() {
     return (
-        <section className="relative flex flex-col w-full py-12 pl-4 overflow-hidden">
+        <section className="relative flex flex-col w-full pt-8  overflow-hidden">
             <div className="w-full absolute h-full bg-neutral-gray-100 right-0 bottom-0 top-40 z-10" />
-            <h1 className="text-[22px] font-semibold leading-6 tracking-[0.4px] uppercase mb-8 ml-2 z-20">
+            <h1 className="text-[20px] text-[#0C0C0C] font-semibold leading-6 tracking-[0.4px] uppercase pl-4 mb-8 z-20">
                 Nossos Produtos
             </h1>
 
-            <Carousel opts={{ align: "start", dragFree: true }} className="w-full relative z-20">
-                <CarouselContent className="-ml-1">
+            <Carousel opts={{ align: "start", dragFree: true }} className="w-full relative pl-[13px] z-20">
+                <CarouselContent className="-ml-2">
                     {ourProductsData.map((product, index) => (
-                        <CarouselItem key={index} className="pl-[9px] basis-auto">
+                        <CarouselItem key={index} className="pl-[8px] basis-auto">
                             <CategoryCard
                                 image={product.image}
                                 title={product.title}
@@ -73,8 +73,8 @@ export function OurProducts() {
                 </CarouselContent>
 
                 {/* As setas flutuando nas pontas, igual a referência */}
-                <CarouselPrevious className="size-6 absolute -left-2 top-6 -translate-y-1/2 bg-white/90 hover:bg-white text-primary border-none shadow-md z-10" />
-                <CarouselNext className="size-6 absolute right-2 top-6 -translate-y-1/2 bg-white/90 hover:bg-white text-primary border-none shadow-md z-10" />
+                <CarouselPrevious className="size-6 absolute left-1 top-6 -translate-y-1/2 bg-white text-primary hover:text-primary/50 border-none shadow-lg z-10" />
+                <CarouselNext className="size-6 absolute right-4 top-6 -translate-y-1/2 bg-white text-primary hover:text-primary/50 border-none shadow-lg z-10" />
             </Carousel>
         </section>
     )
