@@ -84,7 +84,7 @@ export function DisplayWindow() {
             <Tabs defaultValue="masculino" className="w-full relative">
                 <TabsList
                     variant="line"
-                    className="w-full justify-start gap-4 md:gap-8 border-neutral-gray-900 overflow-x-auto no-scrollbar flex-nowrap z-20"
+                    className="w-full justify-start gap-4 md:gap-8 border-neutral-gray-900 z-20"
                 >
                     <TabsTrigger
                         value="masculino"
